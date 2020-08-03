@@ -30,7 +30,7 @@ services:
       restart_policy:
         condition: on-failure
 
-    node-exporter:
+  node-exporter:
     image: prom/node-exporter
     volumes:
       - /proc:/host/proc:ro
@@ -51,7 +51,7 @@ services:
       restart_policy:
           condition: on-failure
 
- cadvisor:
+  cadvisor:
     image: google/cadvisor
     volumes:
       - /:/rootfs:ro
